@@ -1,4 +1,4 @@
-package com.example.exemplesqllight.entities;
+package com.example.exemplesqllight.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -48,7 +48,6 @@ public class SortieDao extends BaseDao implements InterfaceDao<Sortie> {
 
     @Override
     public int update(Sortie entity) {
-        try{}catch (Exception ex){}
         ContentValues content = new ContentValues();
         content.put(ConstantBdd.COL_NOM_SORTIE, entity.getNom());
         content.put(ConstantBdd.COL_DESCRIPTION_SORTIE, entity.getDescription());
@@ -60,7 +59,6 @@ public class SortieDao extends BaseDao implements InterfaceDao<Sortie> {
 
     @Override
     public int delete(int id) {
-        try{}catch (Exception ex){}
         return mSQLiteDatabase.delete(ConstantBdd.TABLE_SORTIES,
                 ConstantBdd.COL_ID_SORTIE + " = " + id,null);
     }
